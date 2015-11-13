@@ -43,3 +43,7 @@ Temporary Items
 .apdisk
 target
 .idea
+.settings
+.project
+.classpath
+Aplikacja.iml
