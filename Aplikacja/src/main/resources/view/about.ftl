@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Tron Game</title>
+    <title>Tron Game - About</title>
     <meta charset="utf-8">
     <meta name="viewreport" content="width=device-width, initial-scale=1">
     
@@ -23,15 +23,14 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="http://localhost:8080/">Home</a> </li>
-                    <li><a href="http://localhost:8080/About">About</a> </li>
+                    <li><a href="http://www.facebook.pl">About</a> </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container-fluid bg-1 text-center">
-        <h3>Hello ${person.name}!</h3>
         <img src="/image/game.gif" class="img-rounded" style="display:inline" alt="Game" width="350" height="350">
-        <h3>Website in construction</h3>
+        <h3>About</h3>
         <h3>Please come back later</h3>
     </div>
 </body>
