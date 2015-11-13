@@ -23,13 +23,13 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="http://localhost:8080/">Home</a> </li>
-                    <li><a href="http://www.facebook.pl">About</a> </li>
+                    <li><a href="http://localhost:8080/About">About</a> </li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container-fluid bg-1 text-center">
-        <img src="/image/game.gif" class="img-rounded" style="display:inline" alt="Game" width="350" height="350">
+    <h3>About</h3>
         <h3>About</h3>
         <h3>Please come back later</h3>
     </div>
