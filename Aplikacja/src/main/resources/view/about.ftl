@@ -5,9 +5,8 @@
 </head>
 <body>
     <div class="container-fluid bg-1 text-center">
-    <h3>About</h3>
-        <h3>About</h3>
-        <h3>Please come back later</h3>
+    <h2 style="font-family: Magneto">How to play</h2>
+        <h4>To win the game you have to avoid a track or borderline yourself.</h4>
     </div>
     <#include "footer.ftl">
 </body>
