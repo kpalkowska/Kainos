@@ -11,7 +11,7 @@
 
 <@page_body/>
 
-    <div class="container-fluid bg-1 text-center">
+    <div class="container-fluid body-bg text-center">
         <h3 id="personName">Hello ${person.name} !</h3>
         <img src="/image/game.png" class="img-rounded" style="display:inline" alt="Game" width="350" height="350">
         <h4>Website is under construction</h4>
