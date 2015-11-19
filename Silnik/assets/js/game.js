@@ -17,7 +17,7 @@ var Game = {
 
         snake = [];                     // This will work as a stack, containing the parts of our snake
         squareSize = 3;                // The length of a side of the squares. Our image is 3x3 pixels.
-        score = 0;                      // Game score.
+        score = 40;                      // Game score.
         speed = 0;                      // Game speed.
         updateDelay = 0;                // A variable for control over update rates.
         direction = 'right';            // The direction of our snake.
