@@ -1,24 +1,9 @@
-/*
-window.alert('hey!');
+var sec = 15*1000;
 
-
-if (nickValue == null) {
-	
-}
-
-function nickChange() {		
-				//var nickValue = document.getElementById('Nick').value
-				window.location = "/?name="+nickValue;
-
-if (document.URL.indexOf("?name") <= 0) {
-	nickValue = null 
-	nickValue = window.prompt("Type your nick here.","Your Nick");
-    window.location = "/?name="+nickValue;
-}
-*/
 function setCookie(cname, cvalue, exdays) {
+	
     var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    d.setTime(d.getTime() + (exdays*sec));
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
@@ -34,14 +19,32 @@ function getCookie(cname) {
     return "";
 }
 
-function checkCookie() {
+function checkCookie() {	
     var user = getCookie("username");
     if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-        user = prompt("Please enter your name:", "");
-        if (user != "" && user != null) {
-            setCookie("username", user, 365);
-        }
+        swal("Welcome again ",""+ user, "success");
+    } 
+    
+    else {
+    	swal ({   title: "Welcome!",
+	    		text: "Write your nickname",
+	    		type: "input",
+	    		showCancelButton: true,
+	    		closeOnConfirm: false,
+	    		animation: "slide-from-top",
+	    		inputPlaceholder: "Nick" },
+	    		
+    			function(inputValue){
+    			if (inputValue === false) return false;   
+    			if (inputValue === "") {     swal.showInputError("You need to write something!");  return false   }
+    			
+		    	swal("Nice!", "Your nick: " + inputValue, "success"); 
+		    	user = inputValue;
+    	
+			if (user != "" && user != null) {
+					setCookie("username", user, 1);
+				}
+			
+    		});  
     }
 }

@@ -16,6 +16,7 @@ public class ViewService extends Service<Configuration> {
         bootstrap.addBundle(new AssetsBundle("/assets/image","/image"));
         bootstrap.addBundle(new AssetsBundle("/assets/css","/css"));
         bootstrap.addBundle(new AssetsBundle("/assets/js","/js"));
+        bootstrap.addBundle(new AssetsBundle("/assets/dist","/dist"));
     }
 
     @Override
