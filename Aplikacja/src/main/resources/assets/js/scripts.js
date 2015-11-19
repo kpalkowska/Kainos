@@ -1,5 +1,7 @@
 var sec = 15*1000;
 
+
+
 function setCookie(cname, cvalue, exdays) {
 	
     var d = new Date();
@@ -22,7 +24,7 @@ function getCookie(cname) {
 function checkCookie() {	
     var user = getCookie("username");
     if (user != "") {
-        swal("Welcome again ",""+ user, "success");
+        //swal("Welcome again ",""+ user, "success");
     } 
     
     else {
@@ -44,7 +46,14 @@ function checkCookie() {
 			if (user != "" && user != null) {
 					setCookie("username", user, 1);
 				}
-			
+			location.reload();
     		});  
     }
+}
+
+function setUsername(){
+	var user = getCookie("username");
+	if(user != ""){
+		document.getElementById("Nick").innerHTML = "Welcome " + user + " !";
+		}
 }

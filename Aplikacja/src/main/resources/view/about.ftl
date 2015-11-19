@@ -4,7 +4,7 @@
 	<@page_head/>
     <title>Tron Game - About</title>
 </head>
-<body>]
+<body>
 	<@page_body/>
     <div class="container-fluid body-bg text-center">
     <h2 style="font-family: Magneto">How to play</h2>
