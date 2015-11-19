@@ -7,7 +7,7 @@
 
 </head>
 
-<body>
+<body onload="checkCookie()">
 
 <@page_body/>
 
