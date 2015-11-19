@@ -23,11 +23,7 @@ function getCookie(cname) {
 
 function checkCookie() {	
     var user = getCookie("username");
-    if (user != "") {
-        //swal("Welcome again ",""+ user, "success");
-    } 
-    
-    else {
+    if (user == "")  {
     	swal ({   title: "Welcome!",
 	    		text: "Write your nickname",
 	    		type: "input",
