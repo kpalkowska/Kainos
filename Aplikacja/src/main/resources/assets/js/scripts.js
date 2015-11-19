@@ -41,12 +41,14 @@ function checkCookie() {
     			if (inputValue === "") {     swal.showInputError("You need to write something!");  return false   }
     			
 		    	swal("Nice!", "Your nick: " + inputValue, "success"); 
+    		
 		    	user = inputValue;
     	
 			if (user != "" && user != null) {
 					setCookie("username", user, 1);
 				}
-			location.reload();
+			
+			setTimeout(function(){location.reload();}, 2000);
     		});  
     }
 }
