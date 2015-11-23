@@ -1,4 +1,4 @@
-var snake, apple, squareSize, score, speed,
+var snake, squareSize, score, speed,
     updateDelay, direction, new_direction,
     addNew, cursors, scoreTextValue, speedTextValue, textStyle_Key, textStyle_Value;
 
@@ -7,8 +7,7 @@ var Game = {
     preload : function() {
         // Here we load all the needed resources for the level.
         // In our case, that's just two squares - one for the snake body and one for the apple.
-        game.load.image('snake', '/image/snake.png');
-        game.load.image('apple', '/image/apple.png');
+        game.load.image('snake', '/image/snake1.png');
     },
 
     create : function() {
@@ -17,9 +16,8 @@ var Game = {
         // We need them to be globally available so that the update function can alter them.
 
         snake = [];                     // This will work as a stack, containing the parts of our snake
-        apple = {};                     // An object for the apple;
-        squareSize = 15;                // The length of a side of the squares. Our image is 15x15 pixels.
-        score = 0;                      // Game score.
+        squareSize = 3;                // The length of a side of the squares. Our image is 3x3 pixels.
+        score = 40;                      // Game score.
         speed = 0;                      // Game speed.
         updateDelay = 0;                // A variable for control over update rates.
         direction = 'right';            // The direction of our snake.
@@ -33,22 +31,18 @@ var Game = {
 
         // Generate the initial snake stack. Our snake will be 10 elements long.
         for(var i = 0; i < 10; i++){
-            snake[i] = game.add.sprite(150+i*squareSize, 150, 'snake');  // Parameters are (X coordinate, Y coordinate, image)
+            snake[i] = game.add.sprite(30+i*squareSize, 30, 'snake');  // Parameters are (X coordinate, Y coordinate, image)
         }
-
-
-        // Genereate the first apple.
-        this.generateApple();
 
         // Add Text to top of game.
         textStyle_Key = { font: "bold 14px sans-serif", fill: "#46c0f9", align: "center" };
         textStyle_Value = { font: "bold 18px sans-serif", fill: "#fff", align: "center" };
 
         // Score.
-        game.add.text(30, 20, "SCORE", textStyle_Key);
+        game.add.text(30, 20, "WYNIK", textStyle_Key);
         scoreTextValue = game.add.text(90, 18, score.toString(), textStyle_Value);
         // Speed.
-        game.add.text(1200, 20, "SPEED", textStyle_Key);
+        game.add.text(1200, 20, "PRĘDKOŚĆ", textStyle_Key);
         speedTextValue = game.add.text(1300, 18, speed.toString(), textStyle_Value);
 
     },
@@ -98,6 +92,7 @@ var Game = {
                 lastCell = snake.shift(),
                 oldLastCellx = lastCell.x,
                 oldLastCelly = lastCell.y;
+                snake.unshift(game.add.sprite(oldLastCellx, oldLastCelly, 'snake'));
 
             // If a new direction has been chosen from the keyboard, make it the direction of the snake now.
             if(new_direction){
@@ -110,20 +105,20 @@ var Game = {
 
             if(direction == 'right'){
 
-                lastCell.x = firstCell.x + 15;
+                lastCell.x = firstCell.x + 3;
                 lastCell.y = firstCell.y;
             }
             else if(direction == 'left'){
-                lastCell.x = firstCell.x - 15;
+                lastCell.x = firstCell.x - 3;
                 lastCell.y = firstCell.y;
             }
             else if(direction == 'up'){
                 lastCell.x = firstCell.x;
-                lastCell.y = firstCell.y - 15;
+                lastCell.y = firstCell.y - 3;
             }
             else if(direction == 'down'){
                 lastCell.x = firstCell.x;
-                lastCell.y = firstCell.y + 15;
+                lastCell.y = firstCell.y + 3;
             }
 
 
@@ -143,10 +138,6 @@ var Game = {
                 snake.unshift(game.add.sprite(oldLastCellx, oldLastCelly, 'snake'));
                 addNew = false;
             }
-
-            // Check for apple collision.
-            this.appleCollision();
-
             // Check for collision with self. Parameter is the head of the snake.
             this.selfCollision(firstCell);
 
@@ -157,42 +148,14 @@ var Game = {
 
     },
 
-    generateApple: function(){
-
-        // Chose a random place on the grid.
-        // X is between 0 and 585 (39*15)
-        // Y is between 0 and 435 (29*15)
-
-        var randomX = Math.floor(Math.random() * 40 ) * squareSize,
-            randomY = Math.floor(Math.random() * 30 ) * squareSize;
-
-        // Add a new apple.
-        apple = game.add.sprite(randomX, randomY, 'apple');
-    },
-
     appleCollision: function() {
 
         // Check if any part of the snake is overlapping the apple.
         // This is needed if the apple spawns inside of the snake.
         for(var i = 0; i < snake.length; i++){
-            if(snake[i].x == apple.x && snake[i].y == apple.y){
 
                 // Next time the snake moves, a new block will be added to its length.
                 addNew = true;
-
-                // Destroy the old apple.
-                apple.destroy();
-
-                // Make a new one.
-                this.generateApple();
-
-                // Increase score.
-                score++;
-
-                // Refresh scoreboard.
-                scoreTextValue.text = score.toString();
-
-            }
         }
 
     },
@@ -214,7 +177,7 @@ var Game = {
 
         // Check if the head of the snake is in the boundaries of the game field.
 
-        if(head.x >= 1350 || head.x < 0 || head.y >= 600 || head.y < 0){
+        if(head.x >= 1350 || head.x < 0 || head.y >= 650 || head.y < 0){
 
 
             // If it's not in, we've hit a wall. Go to game over screen.
