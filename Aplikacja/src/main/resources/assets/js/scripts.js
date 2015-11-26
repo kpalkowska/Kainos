@@ -44,7 +44,8 @@ function checkCookie() {
 					setCookie("username", user, 1);
 				}
 			
-			setTimeout(function(){location.reload();}, 2000);
+			setUsername();
+			
     		});  
     }
 }

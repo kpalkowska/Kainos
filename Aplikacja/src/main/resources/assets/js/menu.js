@@ -17,7 +17,7 @@ var Menu = {
     	        var imgW = game.cache.getImage("menu").width,
     	        imgH = game.cache.getImage("menu").height;
     	     
-    	        image.scale.setTo(w/imgW ,h/imgH);
+    	        image.scale.setTo(1200/imgW ,600/imgH);
     	        
     	        image.inputEnabled = true;
     	        

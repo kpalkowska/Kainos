@@ -18,7 +18,7 @@
 
     <div class="container-fluid body-bg text-center">      
         <img src="/image/game.png" class="img-rounded" style="display:inline" alt="Game" width="350" height="350">
-            <div id="mainContent">
+            <div class="container-fluid body-bg text-center" id="mainContent">
 			</div>
         <h4>Website is under construction</h4>
         <h4>Please come back later</h4>        

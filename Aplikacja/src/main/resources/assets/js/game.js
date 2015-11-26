@@ -23,10 +23,6 @@ var Game = {
         direction = 'right';            // The direction of our snake.
         new_direction = null;           // A buffer to store the new direction into.
         addNew = false;                 // A variable used when an apple has been eaten.
-        
-        w = window.innerWidth * window.devicePixelRatio / 1.1,
-        h = window.innerHeight * window.devicePixelRatio / 1.1;
-
 
         // Set up a Phaser controller for keyboard input.
         cursors = game.input.keyboard.createCursorKeys();
@@ -35,7 +31,7 @@ var Game = {
 
         // Generate the initial snake stack. Our snake will be 10 elements long.
         for(var i = 0; i < 10; i++){
-            snake[i] = game.add.sprite(w*0.05+i*squareSize, h*0.05, 'snake');  // Parameters are (X coordinate, Y coordinate, image)
+            snake[i] = game.add.sprite(1200*0.05+i*squareSize, 600*0.05, 'snake');  // Parameters are (X coordinate, Y coordinate, image)
         }
 
         // Add Text to top of game.
@@ -46,10 +42,10 @@ var Game = {
         game.add.text(30, 20, "WYNIK", textStyle_Key);
         scoreTextValue = game.add.text(90, 18, score.toString(), textStyle_Value);
         // Speed.
-        game.add.text(w-(w*0.1), 20, "PRĘDKOŚĆ", textStyle_Key);
-        speedTextValue = game.add.text(w-(w*0.03), 18, speed.toString(), textStyle_Value);
+        game.add.text(1200-(1200*0.1), 20, "PRĘDKOŚĆ", textStyle_Key);
+        speedTextValue = game.add.text(1200-(1200*0.03), 18, speed.toString(), textStyle_Value);
         
-        game.add.text(w/2, 20,  getCookie("username"), textStyle_Key);
+        game.add.text(1200/2, 20,  getCookie("username"), textStyle_Key);
 
 
     },
@@ -184,7 +180,7 @@ var Game = {
 
         // Check if the head of the snake is in the boundaries of the game field.
 
-        if(head.x >= w || head.x < 0 || head.y >= h || head.y < 0){
+        if(head.x >= 1200 || head.x < 0 || head.y >= 600 || head.y < 0){
 
 
             // If it's not in, we've hit a wall. Go to game over screen.
