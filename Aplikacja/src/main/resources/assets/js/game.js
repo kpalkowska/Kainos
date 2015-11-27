@@ -8,6 +8,8 @@ var Game = {
         // Here we load all the needed resources for the level.
         // In our case, that's just two squares - one for the snake body and one for the apple.
         game.load.image('snake', '/image/snake1.png');
+        game.load.image('snake2', '/image/snake2.png');
+        
     },
 
     create : function() {
@@ -34,8 +36,8 @@ var Game = {
 
         // Generate the initial snake stack. Our snake will be 10 elements long.
         for(var i = 0; i < 10; i++){
-        	 snake[i] = game.add.sprite(5+i*squareSize, 500, 'snake');
-            snake2[i] = game.add.sprite(5+i*squareSize, 50, 'snake');  // Parameters are (X coordinate, Y coordinate, image)
+        	 snake[i] = game.add.sprite(500+i*squareSize, 50, 'snake');
+            snake2[i] = game.add.sprite(5+i*squareSize, 500, 'snake2');  // Parameters are (X coordinate, Y coordinate, image)
            
             
         }
@@ -132,7 +134,7 @@ var Game = {
                 lastCell2 = snake2.shift(),
                 oldLastCellx2 = lastCell2.x,
                 oldLastCelly2 = lastCell2.y;
-                snake2.unshift(game.add.sprite(oldLastCellx2, oldLastCelly2, 'snake'));
+                snake2.unshift(game.add.sprite(oldLastCellx2, oldLastCelly2, 'snake2'));
 
             // If a new direction has been chosen from the keyboard, make it the direction of the snake now.
             if(new_direction){
@@ -211,7 +213,7 @@ var Game = {
             // Create a block in the back of the snake with the old position of the previous last block (it has moved now along with the rest of the snake).
             if(addNew){
                 snake.unshift(game.add.sprite(oldLastCellx, oldLastCelly, 'snake'));
-                snake2.unshift(game.add.sprite(oldLastCellx2, oldLastCelly2, 'snake'));
+                snake2.unshift(game.add.sprite(oldLastCellx2, oldLastCelly2, 'snake2'));
                 
             }
             // Check for collision with self. Parameter is the head of the snake.
