@@ -36,7 +36,7 @@ var Game = {
 
         // Generate the initial snake stack. Our snake will be 10 elements long.
         for(var i = 0; i < 10; i++){
-        	 snake[i] = game.add.sprite(500+i*squareSize, 50, 'snake');
+        	 snake[i] = game.add.sprite(1100+i*squareSize, 50, 'snake');
             snake2[i] = game.add.sprite(5+i*squareSize, 500, 'snake2');  // Parameters are (X coordinate, Y coordinate, image)
            
             
