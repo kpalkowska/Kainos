@@ -55,6 +55,23 @@ public class AppTest {
     }
     
     @Test
+    public void withErrorNickname() {
+    	
+        //Create object of HomePage Class
+        HomePage home = new HomePage(driver);
+        
+        home.setNickname("");
+        home.clickOnOkButton();
+        
+        //Check if page is opened
+        Assert.assertEquals(driver.getTitle(), "Tron Game");
+        
+        //Check if nickname is null
+        Assert.assertTrue(home.isErrorVisible());
+
+    }
+    
+    @Test
     public void withoutNickname() {
 
         //Create object of HomePage Class

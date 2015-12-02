@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Selenium.tests.WithNicknameTest">
+      <class name="Selenium.tests.AppTest">
         <methods>
-          <include name="withoutNickname"/>
-          <include name="setUp"/>
+          <include name="withErrorNickname"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="deleteCookies"/>
         </methods>
-      </class> <!-- Selenium.tests.WithNicknameTest -->
+      </class> <!-- Selenium.tests.AppTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

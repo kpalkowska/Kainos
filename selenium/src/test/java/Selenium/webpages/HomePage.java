@@ -21,8 +21,8 @@ public class HomePage {
    @FindBy(how = How.XPATH, using = "/html/body/div[3]/div[7]/button")
    private WebElement CancelButton;
    
-   @FindBy(how = How.XPATH, using = "/html/body/div[3]")
-   private WebElement hideSweetAllert;
+   @FindBy(how = How.XPATH, using = "/html/body/div[3]/div[6]/p")
+   private WebElement errorMessage;
    
    @FindBy(how = How.XPATH, using = "/html/body/div[3]/fieldset/input")
    private WebElement nickName;
@@ -69,6 +69,10 @@ public class HomePage {
 	
 	public boolean isNickDefault(){
 		return welcomeText.getText().toString().contains("Welcome Stranger !");
+	}
+	
+	public boolean isErrorVisible(){
+		return errorMessage.getText().toString().contains("You need to write something!");
 	}
 
 }
