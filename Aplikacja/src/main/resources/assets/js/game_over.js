@@ -21,7 +21,8 @@ var Game_Over = {
         image.inputEnabled = true;
         
        if (win ==2) game.add.text(400, 600/2,  "Wygrał gracz 2", textStyle);
-       else game.add.text(400, 600/2,  "Wygrał gracz 1", textStyle);
+       else if (win ==1) game.add.text(400, 600/2,  "Wygrał gracz 1", textStyle);
+       else game.add.text(400, 600/2,  "REMIS", textStyle);
         image.events.onInputDown.add(this.startGame, this);
 
         

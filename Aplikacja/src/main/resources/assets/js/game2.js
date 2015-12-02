@@ -45,7 +45,7 @@ var Game = {
             snake[0] = game.add.sprite(1200-squareSize, 591, 'snake');  // Parameters are (X coordinate, Y coordinate, image)
             
             takenTab[1200-squareSize][51] = true;
-            takenTab[0+squareSize][591] =true;
+            takenTab[0][591] =true;
 
         textStyle_Key = { font: "bold 14px sans-serif", fill: "#46c0f9", align: "center" };
         textStyle_Value = { font: "bold 18px sans-serif", fill: "#fff", align: "center" };
@@ -189,9 +189,10 @@ var Game = {
     },
 
     Collision: function(head,head2) {
-    	
+
     	if (takenTab[head.x][head.y] == true) {win = 2;game.state.start('Game_Over');}
     	if (takenTab[head2.x][head2.y] == true) {win = 1;game.state.start('Game_Over');}
+    	if (takenTab[head.x][head.y] == true && takenTab[head2.x][head2.y] == true)  {win = 0; game.state.start('Game_Over');}
     },
 
 };
