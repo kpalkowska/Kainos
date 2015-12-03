@@ -3,6 +3,7 @@ package Selenium.tests;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeClass;
@@ -49,11 +50,6 @@ public class AppTest {
 
     }
     
-    @AfterMethod
-    public void deleteCookies() throws InterruptedException{
-    	driver.manage().deleteAllCookies();
-    }
-    
     @Test
     public void withErrorNickname() {
     	
@@ -68,6 +64,8 @@ public class AppTest {
         
         //Check if nickname is null
         Assert.assertTrue(home.isErrorVisible());
+        
+        Assert.assertEquals(driver.findElements(By.id("mainContent")).size(), 1);
 
     }
     
@@ -85,6 +83,11 @@ public class AppTest {
         //Check if nickname is set
         Assert.assertTrue(home.isNickDefault());
 
+    }
+    
+    @AfterMethod
+    public void deleteCookies() throws InterruptedException{
+    	driver.manage().deleteAllCookies();
     }
     
     @AfterClass
