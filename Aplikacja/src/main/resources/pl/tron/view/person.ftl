@@ -6,7 +6,7 @@
     <title>Tron Game</title>
     <script src="/js/phaser.min.js"></script>
     <script src="/js/game_over.js"></script>
-    <script src="/js/game.js"></script>
+    <script src="/js/game2.js"></script>
     <script src="/js/menu.js"></script>
     <script src="/js/main.js"></script>
 

@@ -27,8 +27,8 @@ function checkCookie() {
     	swal ({   title: "Welcome!",
 	    		text: "Write your nickname",
 	    		type: "input",
-	    		showCancelButton: true,
 	    		closeOnConfirm: false,
+	    		allowEscapeKey: false,
 	    		animation: "slide-from-top",
 	    		inputPlaceholder: "Nick" },
 	    		
@@ -43,10 +43,11 @@ function checkCookie() {
 			if (user != "" && user != null) {
 					setCookie("username", user, 1);
 				}
+			window.scrollTo(0,500);
 			
 			setUsername();
 			
-    		});  
+    		});
     }
 }
 
