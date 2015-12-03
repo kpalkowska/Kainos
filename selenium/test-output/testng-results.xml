@@ -1,41 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19158" started-at="2015-12-03T10:07:40Z" finished-at="2015-12-03T10:07:59Z">
+  <suite name="Default suite" duration-ms="19591" started-at="2015-12-03T14:48:46Z" finished-at="2015-12-03T14:49:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19158" started-at="2015-12-03T10:07:40Z" finished-at="2015-12-03T10:07:59Z">
+    <test name="Default test" duration-ms="19591" started-at="2015-12-03T14:48:46Z" finished-at="2015-12-03T14:49:05Z">
       <class name="Selenium.tests.AppTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="setUp" is-config="true" duration-ms="2659" started-at="2015-12-03T11:07:40Z" finished-at="2015-12-03T11:07:43Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="setUp" is-config="true" duration-ms="2683" started-at="2015-12-03T15:48:46Z" finished-at="2015-12-03T15:48:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="withErrorNickname()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="withErrorNickname" duration-ms="6091" started-at="2015-12-03T11:07:43Z" finished-at="2015-12-03T11:07:49Z">
+        <test-method status="PASS" signature="withErrorNickname()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="withErrorNickname" duration-ms="7057" started-at="2015-12-03T15:48:48Z" finished-at="2015-12-03T15:48:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- withErrorNickname -->
-        <test-method status="PASS" signature="deleteCookies()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="deleteCookies" is-config="true" duration-ms="11" started-at="2015-12-03T11:07:49Z" finished-at="2015-12-03T11:07:49Z">
+        <test-method status="PASS" signature="deleteCookies()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="deleteCookies" is-config="true" duration-ms="42" started-at="2015-12-03T15:48:55Z" finished-at="2015-12-03T15:48:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteCookies -->
-        <test-method status="PASS" signature="withNickname()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="withNickname" duration-ms="6847" started-at="2015-12-03T11:07:49Z" finished-at="2015-12-03T11:07:56Z">
+        <test-method status="PASS" signature="withNickname()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="withNickname" duration-ms="8389" started-at="2015-12-03T15:48:55Z" finished-at="2015-12-03T15:49:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- withNickname -->
-        <test-method status="PASS" signature="deleteCookies()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="deleteCookies" is-config="true" duration-ms="49" started-at="2015-12-03T11:07:56Z" finished-at="2015-12-03T11:07:56Z">
+        <test-method status="PASS" signature="deleteCookies()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="deleteCookies" is-config="true" duration-ms="68" started-at="2015-12-03T15:49:04Z" finished-at="2015-12-03T15:49:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteCookies -->
-        <test-method status="PASS" signature="withoutNickname()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="withoutNickname" duration-ms="2145" started-at="2015-12-03T11:07:56Z" finished-at="2015-12-03T11:07:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- withoutNickname -->
-        <test-method status="PASS" signature="deleteCookies()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="deleteCookies" is-config="true" duration-ms="11" started-at="2015-12-03T11:07:58Z" finished-at="2015-12-03T11:07:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteCookies -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="tearDown" is-config="true" duration-ms="1325" started-at="2015-12-03T11:07:58Z" finished-at="2015-12-03T11:07:59Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Selenium.tests.AppTest@19bb089b]" name="tearDown" is-config="true" duration-ms="1322" started-at="2015-12-03T15:49:04Z" finished-at="2015-12-03T15:49:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

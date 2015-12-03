@@ -68,23 +68,7 @@ public class AppTest {
         Assert.assertEquals(driver.findElements(By.id("mainContent")).size(), 1);
 
     }
-    
-    @Test
-    public void withoutNickname() {
 
-        //Create object of HomePage Class
-        HomePage home = new HomePage(driver);
-        
-        home.clickOnCancelButton();
-        
-        //Check if page is opened
-        Assert.assertEquals(driver.getTitle(), "Tron Game");
-        
-        //Check if nickname is set
-        Assert.assertTrue(home.isNickDefault());
-
-    }
-    
     @AfterMethod
     public void deleteCookies() throws InterruptedException{
     	driver.manage().deleteAllCookies();
