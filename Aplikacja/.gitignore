@@ -46,4 +46,4 @@ target
 .settings
 .project
 .classpath
-Aplikacja.iml
+*.iml
