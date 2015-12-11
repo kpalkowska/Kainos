@@ -17,17 +17,17 @@ public class HomePage {
 
    //Locators
    
-   //Sweet Allert
-   @FindBy(how = How.XPATH, using = "/html/body/div[3]/div[7]/button")
-   private WebElement CancelButton;
-   
+   //Sweet Alert
    @FindBy(how = How.XPATH, using = "/html/body/div[3]/div[6]/p")
    private WebElement errorMessage;
    
    @FindBy(how = How.XPATH, using = "/html/body/div[3]/fieldset/input")
    private WebElement nickName;
    
-   @FindBy(how = How.XPATH, using = "/html/body/div[3]/div[7]/div/button")
+   //@FindBy(how = How.XPATH, using = "/html/body/div[3]/div[7]/div/button")
+   //private WebElement OkButton;
+   
+   @FindBy(how = How.CLASS_NAME, using = "confirm")
    private WebElement OkButton;
    
    //Home Button
@@ -49,10 +49,6 @@ public class HomePage {
    public void setNickname(String nick){
        nickName.clear();
        nickName.sendKeys(nick);
-   }
-   
-   public void clickOnCancelButton(){
-       CancelButton.click();
    }
    
    public void clickOnOkButton(){

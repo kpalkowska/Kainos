@@ -6,6 +6,7 @@
       <class name="Selenium.tests.AppTest">
         <methods>
           <include name="withErrorNickname"/>
+          <include name="withNickname"/>
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="deleteCookies"/>
